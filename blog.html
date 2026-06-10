@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화곡 셔츠룸 브로들의 투자 블로그 - 마포 주식투자 인사이트</title>
+    <meta name="description" content="마포 지역 주식투자자들이 찾는 화곡 셔츠룸의 공식 블로그. 브로들만의 거침없는 투자 철학과 시장 분석, 010-6279-0862. 원칙 없는 시장은 씹어먹는다.">
+    <meta name="keywords" content="화곡 셔츠룸 블로그, 마포 주식투자, 주식 브로, 화곡 투자모임, 주식 커뮤니티, 강력한 투자, 시장 분석, sf-t3-1779642675702-158.vercel.app">
+    <meta property="og:title" content="화곡 셔츠룸 블로그 - 마포 주식투자 끝판왕 인사이트">
+    <meta property="og:description" content="마포 지역 주식투자자들이 찾는 화곡 셔츠룸의 블로그. 브로들만의 거침없는 투자 철학과 시장 분석. 원칙 없는 시장은 씹어먹는다.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-158.vercel.app/blog">
+    <meta property="og:image" content="https://sf-t3-1779642675702-158.vercel.app/og-image.jpg">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.6;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.02) 2px, rgba(255,255,255,0.02) 4px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            color: #ff2a2a;
+            text-shadow: 4px 4px 0 #000, 6px 6px 0 rgba(255,42,42,0.3);
+            margin-bottom: 20px;
+            line-height: 1;
+        }
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            color: #ffaa00;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+            border-left: 6px solid #ff2a2a;
+            padding-left: 15px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffaa00;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #c0c0c0;
+        }
+        a {
+            color: #ff2a2a;
+            text-decoration: none;
+            font-weight: 700;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        a:hover {
+            border-bottom-color: #ff2a2a;
+            color: #ff6666;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #ff2a2a;
+            color: #0a0a0a;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            border: 3px solid #ff2a2a;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            box-shadow: 6px 6px 0 rgba(255,42,42,0.3);
+        }
+        .btn:hover {
+            background: #0a0a0a;
+            color: #ff2a2a;
+            box-shadow: 8px 8px 0 rgba(255,42,42,0.5);
+            border-color: #ff2a2a;
+        }
+        header {
+            padding: 20px 0;
+            border-bottom: 3px solid #ff2a2a;
+            margin-bottom: 40px;
+            background: rgba(10,10,10,0.95);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #ff2a2a;
+            letter-spacing: -1px;
+        }
+        .logo span {
+            color: #ffaa00;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li a {
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 0;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            background: none;
+            border: none;
+            padding: 10px;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: #ff2a2a;
+            transition: all 0.3s;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #0a0a0a;
+                flex-direction: column;
+                padding: 20px;
+                border-bottom: 3px solid #ff2a2a;
+                gap: 15px;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.6rem;
+            }
+        }
+        .tel-link {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #ffaa00;
+            color: #0a0a0a;
+            font-weight: 900;
+            font-size: 1.3rem;
+            text-decoration: none;
+            border: 3px solid #ffaa00;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .tel-link:hover {
+            background: #0a0a0a;
+            color: #ffaa00;
+        }
+        .blog-post {
+            background: rgba(255,255,255,0.03);
+            border: 2px solid #222;
+            padding: 40px;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .blog-post::before {
+            content: 'BRO INSIGHT';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: #0a0a0a;
+            padding: 0 10px;
+            font-size: 0.8rem;
+            font-weight: 900;
+            color: #ff2a2a;
+            letter-spacing: 3px;
+        }
+        .blog-meta {
+            font-size: 0.85rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #222;
+            padding-bottom: 10px;
+        }
+        .blog-content p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .blog-content strong {
+            color: #ffaa00;
+        }
+        .blog-content .highlight-box {
+            background: rgba(255,42,42,0.1);
+            border-left: 6px solid #ff2a2a;
+            padding: 20px;
+            margin: 30px 0;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #ffaa00;
+        }
+        .blog-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .blog-content ul li {
+            padding: 10px 0 10px 30px;
+            position: relative;
+            color: #c0c0c0;
+            font-size: 1.05rem;
+        }
+        .blog-content ul li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: #ff2a2a;
+            font-size: 0.8rem;
+        }
+        .blog-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .tags {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .tags span {
+            background: #222;
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #888;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 3px solid #222;
+            margin-top: 60px;
+        }
+        footer p {
+            font-size: 0.9rem;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">화곡<span>셔츠룸</span></div>
+                <button class="hamburger" onclick="this.nextElementSibling.classList.toggle('active')">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/about">소개</a></li>
+                    <li><a href="/blog">블로그</a></li>
+                    <li><a href="/contact">문의</a></li>
+                    <li><a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1>BRO BLOG</h1>
+        <p style="font-size:1.2rem; margin-bottom:40px; color:#888; text-transform:uppercase; letter-spacing:2px;">마포 브로들의 거침없는 투자 인사이트 — 원칙 없는 시장은 씹어먹는다</p>
+
+        <article class="blog-post">
+            <div class="blog-meta">2025.03.21 | 작성자: 화곡 셔츠룸 브로 | 카테고리: 투자 철학</div>
+            <h2 style="border-left-color:#ffaa00; color:#ff2a2a;">"시장이 답을 주지 않으면, 답을 만들어라"</h2>
+            <div class="blog-content">
+                <p><strong>브로들아, 들어라.</strong> 오늘은 진짜 중요한 얘기다. 너희가 주식시장에서 왜 계속 털리는지, 그 이유를 정확히 짚어주겠다. 화곡 셔츠룸에 모이는 브로들은 다 알고 있는 사실이지만, 아직 모르는 놈들이 너무 많다.</p>
+
+                <p>시장은 공평하지 않다. 절대 공평하지 않다. 기관은 알고, 외국인은 알고, 너만 모른다. 그게 현실이다. 하지만 여기서 좌절할 놈들은 없다. 우리는 <strong>약자의 전략</strong>으로 싸운다. 정석 따위는 집어치워라. 정석대로 하면 정석대로 털린다.</p>
+
+                <div class="highlight-box">
+                    "원칙이 없는 투자는 자살 행위다. 화곡 셔츠룸의 첫 번째 원칙: 절대 남들이 가는 길로 가지 마라."
+                </div>
+
+                <p><strong>첫째, 쫄지 마라.</strong> 하락장에서 무서워하는 놈들은 이미 진 놈들이다. 진짜 브로는 하락장에서 산다. 남들이 공포에 떨 때, 너는 웃어라. 그게 바로 <strong>역발상의 힘</strong>이다. 마포에서 화곡 셔츠룸까지 오는 브로들은 다 이걸 안다. 쫄면 진다. 이건 불변의 진리다.</p>
+
+                <p><strong>둘째, 정보를 씹어먹어라.</strong> 뉴스? 전문가 의견? 그런 건 개나 줘라. 진짜 정보는 거리에서 나온다. 사람들이 뭘 두려워하는지, 뭘 탐내는지. 그게 바로 <strong>시장의 심리</strong>다. 화곡 셔츠룸에서는 매일 이 얘기만 한다. 심리를 읽는 놈이 시장을 지배한다.</p>
+
+                <p><strong>셋째, 원칙을 세워라.</strong> 감정에 휘둘리지 마라. 내가 정한 룰은 반드시 지켜라. 손절은 냉혹하게, 익절은 욕심부리지 말고. 이게 안 되면 절대 성공할 수 없다. 화곡 셔츠룸 브로들은 다 원칙이 있다. 원칙 없는 놈들은 들어오지도 못한다.</p>
+
+                <ul>
+                    <li><strong>원칙 1:</strong> 하루 최대 손실 5% — 넘으면 무조건 퇴장</li>
+                    <li><strong>원칙 2:</strong> 뉴스 나온 종목은 절대 안 산다 — 이미 늦었다</li>
+                    <li><strong>원칙 3:</strong> 3일 연속 상승한 종목은 쳐다보지도 마라</li>
+                    <li><strong>원칙 4:</strong> 화곡 셔츠룸 브로들과 항상 소통해라 — 혼자 하면 망한다</li>
+                </ul>
+
+                <p>시장은 냉혹하다. 하지만 우리는 더 냉혹해진다. <strong>마포의 진짜 브로들은 화곡 셔츠룸에서 만난다.</strong> 거기서 우리는 전략을 짜고, 서로를 채찍질하고, 진짜 승리를 쟁취한다. 너도 여기 합류할 준비가 됐다면, 지금 바로 전화해라.</p>
+            </div>
+
+            <div class="blog-footer">
+                <div class="tags">
+                    <span>주식투자</span>
+                    <span>마포</span>
+                    <span>화곡 셔츠룸</span>
+                    <span>역발상</span>
+                    <span>브로전략</span>
+                </div>
+                <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
+            </div>
+        </article>
+
+        <div style="text-align:center; margin:60px 0;">
+            <p style="font-size:1.5rem; font-weight:900; color:#ff2a2a; text-transform:uppercase; letter-spacing:3px;">더 강력한 인사이트가 필요하다면?</p>
+            <p style="margin-bottom:30px;">화곡 셔츠룸 브로들과 직접 대화하라. 전화 한 통이 네 투자를 바꾼다.</p>
+            <a href="tel:010-6279-0862" class="btn">지금 전화 걸기</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>화곡 셔츠룸 — 마포 주식투자 끝판왕 | 010-6279-0862</p>
+            <p style="margin-top:10px; font-size:0.7rem; color:#333;">원칙 없는 시장은 씹어먹는다. 브로들만의 거침없는 투자 철학.</p>
+        </div>
+    </footer>
+
+    <script>
+</body>
+</html>

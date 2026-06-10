@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화곡 셔츠룸 정보 - 마포 주식투자 브로들의 거점</title>
+    <meta name="description" content="화곡 셔츠룸, 마포 주식투자자들의 정보 거점. 브로들이 전하는 원칙 없는 시장을 씹어먹는 법. 010-6279-0862. 지금 바로 입장.">
+    <meta name="keywords" content="화곡 셔츠룸, 마포 주식투자 정보, 주식 브로, 화곡 투자모임, 마포 셔츠룸, 주식 커뮤니티, 강력한 투자, sf-t3-1779642675702-158.vercel.app">
+    <meta property="og:title" content="화곡 셔츠룸 - 마포 주식투자 끝판왕 정보">
+    <meta property="og:description" content="화곡 셔츠룸, 마포 주식투자자들의 정보 거점. 브로들이 전하는 원칙 없는 시장을 씹어먹는 법.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sf-t3-1779642675702-158.vercel.app/info">
+    <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Hwagok+Shirts+Room+Info">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Courier New', monospace; 
+            background: #0a0a0a; 
+            color: #e0e0e0; 
+            line-height: 1.6; 
+            padding: 20px;
+            position: relative;
+            min-height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.03) 2px, rgba(255,255,255,0.03) 4px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        h1 { 
+            font-size: 3.5rem; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            letter-spacing: -2px; 
+            color: #ff4444; 
+            border-left: 8px solid #ff4444; 
+            padding-left: 20px; 
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 0 #000, 4px 4px 0 rgba(255,68,68,0.3);
+        }
+        h2 { 
+            font-size: 2rem; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+            color: #ffaa00; 
+            margin: 40px 0 20px;
+            border-bottom: 3px solid #ffaa00;
+            padding-bottom: 10px;
+        }
+        h3 { 
+            font-size: 1.4rem; 
+            font-weight: 600; 
+            color: #ff6666; 
+            margin: 30px 0 15px;
+        }
+        p { margin-bottom: 15px; font-size: 1.1rem; }
+        a { 
+            color: #ffaa00; 
+            text-decoration: none; 
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+        a:hover { 
+            color: #ff4444; 
+            border-bottom-color: #ff4444; 
+        }
+        .btn {
+            display: inline-block;
+            background: #ff4444;
+            color: #0a0a0a;
+            padding: 15px 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+            text-decoration: none;
+            border-bottom: none;
+        }
+        .btn:hover {
+            background: #ffaa00;
+            color: #0a0a0a;
+            transform: scale(1.05);
+            border-bottom: none;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 3px solid #ff4444;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: #ff4444;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+        }
+        .logo span { color: #ffaa00; }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        nav ul li a {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 0;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+        }
+        .hamburger span {
+            width: 30px;
+            height: 3px;
+            background: #ff4444;
+            transition: all 0.3s;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+            border: 3px solid #ff4444;
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .hero::after {
+            content: '⚡ INFO';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff4444;
+            color: #0a0a0a;
+            padding: 5px 15px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+        .hero h1 { border-left-color: #ffaa00; color: #ffaa00; margin-bottom: 30px; }
+        .hero p { font-size: 1.3rem; }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .info-card {
+            background: #141414;
+            border: 2px solid #333;
+            padding: 30px;
+            transition: all 0.3s;
+            position: relative;
+        }
+        .info-card:hover { border-color: #ff4444; transform: translateY(-5px); }
+        .info-card h3 { margin-top: 0; color: #ffaa00; }
+        .info-card .badge {
+            display: inline-block;
+            background: #ff4444;
+            color: #0a0a0a;
+            padding: 3px 10px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .stat-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        .stat-box .label { color: #888; font-size: 0.9rem; text-transform: uppercase; }
+        .stat-box .value { color: #ffaa00; font-size: 1.5rem; font-weight: 700; }
+        .faq-section {
+            margin: 60px 0;
+            background: #141414;
+            border: 2px solid #333;
+            padding: 40px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #333;
+            padding: 20px 0;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-item .question {
+            font-weight: 700;
+            color: #ffaa00;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .faq-item .question::before {
+            content: '▶ ';
+            color: #ff4444;
+        }
+        .faq-item .answer {
+            color: #ccc;
+            padding-left: 25px;
+        }
+        .tel-link {
+            display: block;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #ff4444;
+            padding: 30px;
+            border: 3px dashed #ff4444;
+            margin: 40px 0;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .tel-link:hover {
+            background: #ff4444;
+            color: #0a0a0a;
+            border-style: solid;
+        }
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 3px solid #333;
+            margin-top: 60px;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.5rem; }
+            .hero { padding: 30px 20px; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            nav ul { display: none; flex-direction: column; width: 100%; gap: 15px; padding: 20px 0; }
+            nav ul.active { display: flex; }
+            .hamburger { display: flex; }
+            .info-grid { grid-template-columns: 1fr; }
+            .tel-link { font-size: 1.5rem; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">화곡<span>셔츠룸</span></div>
+            <div class="hamburger" onclick="document.querySelector('nav ul').classList.toggle('active')">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/info">정보</a></li>
+                    <li><a href="/community">커뮤니티</a></li>
+                    <li><a href="tel:01062790862">010-6279-0862</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>정보는 곧 총알이다</h1>
+            <p>마포 브로들이 모여 원칙 없는 시장을 해체하는 방법을 공유한다. 화곡 셔츠룸은 단순한 술자리가 아니다. 이곳은 전장이다. 매일같이 데이터를 갈아 넣고, 패턴을 씹어먹고, 승리의 공식을 만들어낸다. 네가 여기까지 왔다면, 이미 반은 먹고 들어온 거다. 나머지 반은 이 정보로 채워라.</p>
+            <a href="tel:01062790862" class="btn">지금 전화 걸기</a>
+        </section>
+
+        <h2>📍 마포 & 화곡 — 브로들의 지리적 우위</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <div class="badge">🔥 핫존</div>
+                <h3>화곡 본진</h3>
+                <p>화곡동은 마포와 맞닿은 전략적 요충지. 강서구의 숨은 자금줄과 마포의 젊은 피가 만나는 지점. 여기서 우리는 매일 저녁 시장을 분석하고, 다음 날의 베팅을 설계한다.</p>
+                <div class="stat-box">
+                    <span class="label">평균 투자 규모</span>
+                    <span class="value">5,000만↑</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">월 미팅 횟수</span>
+                    <span class="value">12회</span>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="badge">⚡ 시그널</div>
+                <h3>마포 투자 지도</h3>
+                <p>홍대부터 합정, 상암까지. 마포는 크리에이티브한 자본이 모이는 곳이다. 우리는 이 지역의 떠오르는 테마주와 유망 종목을 실시간으로 트래킹한다. 브로들이 직접 발로 뛰어 얻은 인사이트만 공유한다.</p>
+                <div class="stat-box">
+                    <span class="label">추적 종목 수</span>
+                    <span class="value">47개</span>
+                </div>
+                <div class="stat-box">
+                    <span class="label">누적 수익률</span>
+                    <span class="value">+213%</span>
+                </div>
+            </div>
+            <div class="info-card">
+                <div class="badge">💀 룰</div>
+                <h3>브로들의 원칙</h3>
+                <p>1. 감정은 버려라. 차트만 봐라.<br>2. 손절은 곧 이익이다. 미련은 독이다.<br>3. 정보는 나눌수록 강해진다. 혼자 먹지 마라.<br>4. 화곡 셔츠룸의 문은 항상 열려 있다. 단, 진짜만 들어와라.</p>
+                <div class="stat-box">
+                    <span class="label">활동 회원</span>
+                    <span class="value">128명</span>
+                </div>
+            </div>
+        </div>
+
+        <h2>📊 상세 정보 — 시장을 해부한다</h2>
+        <div style="background: #141414; border: 2px solid #333; padding: 30px; margin-bottom: 40px;">
+            <h3 style="color: #ff4444; margin-top: 0;">🔍 화곡 셔츠룸만의 데이터 룸</h3>
+            <p>우리는 매주 3번의 라이브 세션을 진행한다. 브로들이 직접 선정한 종목의 차트를 60인치 스크린에 띄우고, 밤새 토론한다. 여기서 나오는 인사이트는 그 어떤 유료 사이트보다 정확하다. 왜? 우리는 직접 돈을 걸기 때문이다.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+                <div style="background: #1a1a1a; padding: 20px; text-align: center;">
+                    <div style="font-size: 2.5rem; color: #ffaa00; font-weight: 900;">93%</div>
+                    <div style="color: #888; font-size: 0.9rem; text-transform: uppercase;">적중률 (단기)</div>
+                </div>
+                <div style="background: #1a1a1a; padding: 20px; text-align: center;">
+                    <div style="font-size: 2.5rem; color: #ffaa00; font-weight: 900;">45분</div>
+                    <div style="color: #888; font-size: 0.9rem; text-transform: uppercase;">평균 분석 시간</div>
+                </div>
+                <div style="background: #1a1a1a; padding: 20px; text-align: center;">
+                    <div style="font-size: 2.5rem; color: #ffaa00; font-weight: 900;">24h</div>
+                    <div style="color: #888; font-size: 0.9rem; text-transform: uppercase;">실시간 채널 운영</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>❓ 자주 묻는 정보 — 의심은 접어라</h2>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="question">셔츠룸에서 주식 얘기만 하나요?</div>
+                <div class="answer">주식이 메인이다. 하지만 가끔은 맥주 한잔하면서 인생 얘기도 한다. 중요한 건, 여기 오는 놈들은 다 진심으로 돈을 벌겠다는 놈들뿐이다. 잡담은 없다.</div>
+            </div>
+            <div class="faq-item">
+                <div class="question">초보자인데 껴도 되나요?</div>
+                <div class="answer">처음 오면 약간 빡셀 수 있다. 하지만 브로들이 하나하나 알려준다. 단,
+</body>
+</html>
